@@ -46,6 +46,8 @@
   "TRACKS_ADDED": "Added **{count}** tracks to the queue by request of {user}.",
   "NEXT_TRACK": "Track **{current}** has ended, now playing **{next}** _[{duration}]_ by request of {user}.",
   "SKIP_TRACK": "Track **{current}** has been skipped, now playing **{next}** _[{duration}]_ by request of {user}.",
+  "REMOVED_TRACK": "Track **{removed}** requested by {user} has been removed from the queue.",
+  "REMOVED_TRACK_NO_SUFFIX": "{user}, enter the track number to remove from the queue.",
   "MUSIC_PAUSE": "Music is now paused.",
   "MUSIC_PAUSED": "Music is already paused, did you mean `resume`?",
   "MUSIC_RESUME": "Music has been resumed.",

@@ -84,6 +84,14 @@ module.exports = {
     if (player.playing === false) player.setPause(false)
     if (guildInfo[msg.channel.guild.id].paused === true) guildInfo[msg.channel.guild.id].paused = false
   },
+  remove: async (msg, index) => {
+    const removed = guildInfo[msg.channel.guild.id].tracks.splice(index, 1)[0]
+    const trackRequester = msg.channel.guild.members.find(m => m.id === removed.requester)
+    global.i18n.send('REMOVED_TRACK', msg.channel, {
+      removed: removed,
+      user: trackRequester ? trackRequester.username : 'Unknown user' // In case user is not in guild
+    })
+  },
   stop: async (msg) => {
     if (!process.env.WILDBEAST_VOICE_PERSIST) {
       const channelID = global.bot.voiceConnections.get(msg.channel.guild.id).channelId === undefined ? global.bot.voiceConnections.get(msg.channel.guild.id).channelID : global.bot.voiceConnections.get(msg.channel.guild.id).channelId

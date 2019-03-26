@@ -62,6 +62,9 @@ typings/
 
 # idea files
 .idea
+*.iml
+*.ipr
+*.iws
 
 # Docs build
 site
